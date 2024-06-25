@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="3" parallel="tests">
+<listeners>
+<listener class-name="com.comcast.crm.listnerutility.ListenerImplementation"/>
+</listeners>
+  <test name="Test-1" thread-count="3" parallel="tests">
+    <classes>
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+      <methods>
+      <include name="CreateOrganizationTest"/>
+      </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="Test-2" thread-count="3" parallel="tests">
+    <classes>
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+      <methods>
+      <include name="CreateOrganizationWithPhoneNumberTest"/>
+      </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="Test-3" thread-count="3" parallel="tests">
+    <classes>
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+      <methods>
+      <include name="CreateOrganizationWithIndustryTest"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
